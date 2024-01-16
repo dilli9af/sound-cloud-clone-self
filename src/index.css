@@ -32,7 +32,7 @@ h1 {
   line-height: 1.1;
 }
 
-button {
+.btn {
   border-radius: .2rem;
   border: 1px solid transparent;
   padding: 0.2rem 1.2rem;
@@ -67,14 +67,16 @@ button:focus-visible {
 .homepage{
   background-color: white;
   color: white;
+  padding: 1.5rem;
 }
 
 .homepage ul li {
   text-decoration: none;
 }
 
-.logo{
-  height: 2rem;
+.logoImg{
+  width: 10rem;
+  height: auto;
   
 }
 .homepage ul{
@@ -86,12 +88,6 @@ button:focus-visible {
   justify-content: space-between;
   gap: 2rem;
 }
-/* 
-midText div{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-} */
 
 .gridAlbums {
     display: grid;
@@ -120,4 +116,13 @@ midText div{
 .cellAlbum img {
   max-width: 100%; /* Set maximum width for the images */
   height: auto; /* Maintain aspect ratio */
+}
+.footerLinks{
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+}
+.footerLinks li{
+  
+  
 }
