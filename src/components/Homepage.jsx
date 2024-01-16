@@ -5,7 +5,7 @@ const Homepage = () => {
     return (
         <>
             <div>
-                <div  className='homepage' style={{
+                <div className='homepage' style={{
                     backgroundImage: `url("src/images/signup.jpg")`,
                     backgroundRepeat: "no-repeat",
                     backgroundSize: "cover",
