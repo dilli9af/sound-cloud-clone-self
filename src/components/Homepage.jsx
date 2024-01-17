@@ -24,10 +24,10 @@ const Homepage = () => {
                     </nav>
                     <div className='midText'>
                         <div>
-                            <h2>Connect on SoundCloud</h2>
-                            <p>
+                            <h1>Connect on SoundCloud</h1>
+                            <h2>
                                 Discover, stream, and share a constantly expanding mix of <br />music from emerging and major artists around the world.
-                            </p>
+                            </h2>
                         </div>
                         <div>
                             <button className='btn'>Sign up for free</button>
