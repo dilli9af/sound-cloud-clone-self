@@ -1,9 +1,8 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import AlbumGrid from './AlbumGrid';
-import { Navbar } from 'react-bootstrap';
 
 const Homepage = () => {
-    //==========================model script=============//
     const [modal, setModal] = useState(false);
 
     const toggleModal = () => {
@@ -11,62 +10,60 @@ const Homepage = () => {
     };
 
     if (modal) {
-        document.body.classList.add('active-modal')
+        document.body.classList.add('active-modal');
     } else {
-        document.body.classList.remove('active-modal')
+        document.body.classList.remove('active-modal');
     }
 
-    //==========================model close=============//
     return (
         <>
             <div>
-                <div className='homepage' style={{
-                    backgroundImage: `url("src/images/signup.jpg")`,
-                    backgroundRepeat: "no-repeat",
-                    backgroundSize: "cover",
-                    height: "25rem",
-                    width: "100%"
-
-                }}>
-
+                <div
+                    className='homepage'
+                    style={{
+                        backgroundImage: `url("src/images/signup.jpg")`,
+                        backgroundRepeat: 'no-repeat',
+                        backgroundSize: 'cover',
+                        height: '25rem',
+                        width: '100%',
+                        padding: '1.5rem', // Added padding to match CSS
+                    }}
+                >
                     <nav>
-                    <Navbar />
                         <ul>
-                            <li><img className='logoImg' src="src/images/signup_logo.png" alt="logo" /></li>
                             <li>
-                                <li>
-                                    <button onClick={toggleModal} className="btnBlack">
-                                        Sign In
-                                    </button>
-                                    {modal && (
-                                        <div className="modal">
-                                            <div onClick={toggleModal} className="overlay"></div>
-                                            <div className="modal-content">
-
-                                                <div className="modalForm">
-                                                    <h1>Sign In</h1>
-                                                    <input type="text" placeholder="Your Eamil address" />
-                                                    <input type="password" placeholder="Your Passwors" />
-                                                    <button className="btn">Sign In</button></div>
-                                                <h4>Don't have an account? <a href="#" >Sign Up</a></h4>
-                                                <p>
-                                                    When registering, you agree that we may use your provided data for the registration and to send you notifications on our products and services. You can unsubscribe from notifications at any time in your settings. For additional info please refer to our Privacy Policy.</p>
-                                                <button className="close-modal" onClick={toggleModal}>
-                                                    X
-                                                </button>
-                                            </div>
-                                        </div>
-                                    )}
-                                </li>
-                                <li><button onClick={toggleModal} className='btn'>Create Account</button></li>
-                                <li><button onClick={toggleModal} className='btnBlack'>For Artist</button></li>
+                                <img className='logoImg' src="src/images/signup_logo.png" alt="logo" />
                             </li>
-
+                            <li>
+                                <button onClick={toggleModal} className="btnBlack">
+                                    Sign In
+                                </button>
+                                {modal && (
+                                    <div className="modal">
+                                        <div onClick={toggleModal} className="overlay"></div>
+                                        <div className="modal-content">
+                                            <div className="modalForm">
+                                                <h1>Sign In</h1>
+                                                <input type="text" placeholder="Your Email address" />
+                                                <input type="password" placeholder="Your Password" />
+                                                <Link to="/dashboard"><button className="btn">Sign In</button></Link>
+                                            </div>
+                                            <h4>Don't have an account? <a href="#">Sign Up</a></h4>
+                                            <p>
+                                                When registering, you agree that we may use your provided data for the registration and to send you notifications on our products and services. You can unsubscribe from notifications at any time in your settings. For additional info please refer to our Privacy Policy.
+                                            </p>
+                                            <button className="close-modal" onClick={toggleModal}>
+                                                X
+                                            </button>
+                                        </div>
+                                    </div>
+                                )}
+                            </li>
+                            <li><button onClick={toggleModal} className='btn'>Create Account</button></li>
+                            <li><button onClick={toggleModal} className='btnBlack'>For Artist</button></li>
                         </ul>
-
                     </nav>
                     <div className='midText'>
-
                         <div>
                             <h1>Connect on SoundCloud</h1>
                             <h2>
@@ -78,20 +75,22 @@ const Homepage = () => {
                         </div>
                     </div>
                 </div>
-
             </div>
 
             <div>
-                {/* <input type="text" placeholder='Search for Music,Bands, Artists, Podcassts....' /> <span>or</span><button>Upload your own</button> */}
-                <h2 style={{ color: "black" }}>Hear what’s trending for free in the SoundCloud community</h2>
+                <h2 style={{ color: 'black' }}>Hear what’s trending for free in the SoundCloud community</h2>
                 <AlbumGrid />
             </div>
 
-            <div className='annouce'><h2>Thanks for listening. Now join in.</h2>
-                <h3>Save tracks, follow artists and build playlists. All for free.</h3></div>
-            <div><button button onClick={toggleModal} className='btn'>Create Account</button></div>
+            <div className='annouce'>
+                <h2>Thanks for listening. Now join in.</h2>
+                <h3>Save tracks, follow artists and build playlists. All for free.</h3>
+            </div>
+            <div>
+                <button onClick={toggleModal} className='btn'>Create Account</button>
+            </div>
             <hr />
-            <div >
+            <div>
                 <ul className='footerLinks'>
                     <li>About us</li>
                     <li>Artist</li>
@@ -112,7 +111,7 @@ const Homepage = () => {
                 </ul>
             </div>
         </>
-    )
+    );
 }
 
 export default Homepage;
