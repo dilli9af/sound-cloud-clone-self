@@ -192,3 +192,21 @@ body.active-modal {
   padding: .5rem 15rem;
 }
 /* End Model CSS */
+
+.parentNavBar {
+  background-color: #333;
+  padding:  0 5%;
+}
+.navBar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0 5%;
+}
+
+
+.navBar a{
+  color: white;
+}
