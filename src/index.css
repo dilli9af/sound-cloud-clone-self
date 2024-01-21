@@ -68,7 +68,7 @@ button:focus-visible {
     color: #747bff;
   }
   button {
-    background-color: #f9f9f9;
+    
   }
 }
 
@@ -209,4 +209,8 @@ body.active-modal {
 
 .navBar a{
   color: white;
+}
+
+.searchBar{
+  padding: .5rem 20rem .5rem .5rem;
 }
