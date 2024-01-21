@@ -1,7 +1,22 @@
-import React from 'react'
-
+import React, { useState } from 'react'
+import AlbumGrid from './AlbumGrid';
+import { Navbar } from 'react-bootstrap';
 
 const Homepage = () => {
+    //==========================model script=============//
+    const [modal, setModal] = useState(false);
+
+    const toggleModal = () => {
+        setModal(!modal);
+    };
+
+    if (modal) {
+        document.body.classList.add('active-modal')
+    } else {
+        document.body.classList.remove('active-modal')
+    }
+
+    //==========================model close=============//
     return (
         <>
             <div>
@@ -15,14 +30,43 @@ const Homepage = () => {
                 }}>
 
                     <nav>
+                    <Navbar />
                         <ul>
                             <li><img className='logoImg' src="src/images/signup_logo.png" alt="logo" /></li>
-                            <li><li><button className='btn'>Sign in</button></li>
-                                <li><button className='btn'>Create Account</button></li>
-                                <li><h3>For Artist</h3></li></li>
+                            <li>
+                                <li>
+                                    <button onClick={toggleModal} className="btnBlack">
+                                        Sign In
+                                    </button>
+                                    {modal && (
+                                        <div className="modal">
+                                            <div onClick={toggleModal} className="overlay"></div>
+                                            <div className="modal-content">
+
+                                                <div className="modalForm">
+                                                    <h1>Sign In</h1>
+                                                    <input type="text" placeholder="Your Eamil address" />
+                                                    <input type="password" placeholder="Your Passwors" />
+                                                    <button className="btn">Sign In</button></div>
+                                                <h4>Don't have an account? <a href="#" >Sign Up</a></h4>
+                                                <p>
+                                                    When registering, you agree that we may use your provided data for the registration and to send you notifications on our products and services. You can unsubscribe from notifications at any time in your settings. For additional info please refer to our Privacy Policy.</p>
+                                                <button className="close-modal" onClick={toggleModal}>
+                                                    X
+                                                </button>
+                                            </div>
+                                        </div>
+                                    )}
+                                </li>
+                                <li><button onClick={toggleModal} className='btn'>Create Account</button></li>
+                                <li><button onClick={toggleModal} className='btnBlack'>For Artist</button></li>
+                            </li>
+
                         </ul>
+
                     </nav>
                     <div className='midText'>
+
                         <div>
                             <h1>Connect on SoundCloud</h1>
                             <h2>
@@ -30,31 +74,22 @@ const Homepage = () => {
                             </h2>
                         </div>
                         <div>
-                            <button className='btn'>Sign up for free</button>
+                            <button onClick={toggleModal} className='btn'>Sign up for free</button>
                         </div>
                     </div>
                 </div>
 
             </div>
+
             <div>
                 {/* <input type="text" placeholder='Search for Music,Bands, Artists, Podcassts....' /> <span>or</span><button>Upload your own</button> */}
                 <h2 style={{ color: "black" }}>Hear what’s trending for free in the SoundCloud community</h2>
-                <div className='gridAlbums'>
-                    <div className="cellAlbum"><img src='src/images/working.png'></img><br /><p>Temp Song Name 1</p><br /><p>Temp Artist 1</p></div>
-                    <div className="cellAlbum"><img src='src/images/working.png'></img><br /><p>Temp Song Name 2</p><br /><p>Temp Artist 2</p></div>
-                    <div className="cellAlbum"><img src='src/images/working.png'></img><br /><p>Temp Song Name 3</p><br /><p>Temp Artist 3</p></div>
-                    <div className="cellAlbum"><img src='src/images/working.png'></img><br /><p>Temp Song Name 4</p><br /><p>Temp Artist 4</p></div>
-                    <div className="cellAlbum"><img src='src/images/working.png'></img><br /><p>Temp Song Name 5</p><br /><p>Temp Artist 5</p></div>
-                    <div className="cellAlbum"><img src='src/images/working.png'></img><br /><p>Temp Song Name 6</p><br /><p>Temp Artist 6</p></div>
-                    <div className="cellAlbum"><img src='src/images/working.png'></img><br /><p>Temp Song Name 7</p><br /><p>Temp Artist 7</p></div>
-                    <div className="cellAlbum"><img src='src/images/working.png'></img><br /><p>Temp Song Name 8</p><br /><p>Temp Artist 8</p></div>
-                    <div className="cellAlbum"><img src='src/images/working.png'></img><br /><p>Temp Song Name 9</p><br /><p>Temp Artist 9</p></div>
-                </div>
+                <AlbumGrid />
             </div>
 
             <div className='annouce'><h2>Thanks for listening. Now join in.</h2>
                 <h3>Save tracks, follow artists and build playlists. All for free.</h3></div>
-            <div><button className='btn'>Create Account</button></div>
+            <div><button button onClick={toggleModal} className='btn'>Create Account</button></div>
             <hr />
             <div >
                 <ul className='footerLinks'>
