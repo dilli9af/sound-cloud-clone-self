@@ -11,6 +11,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+  
 }
 * {
   margin: 0;
@@ -39,7 +40,18 @@ h1 {
   font-family: inherit;
   background-color: rgb(255, 115, 0);
   cursor: pointer;
-  border-color:rgba(50, 50, 50, 0.5); ;
+  border-color:rgba(50, 50, 50, 0.5);
+}
+.btnbig {
+  border-radius: 0.2rem;
+  border: 1px solid transparent;
+  padding: 0.4rem 2.4rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: rgb(255, 115, 0);
+  cursor: pointer;
+  border-color:rgba(50, 50, 50, 0.5);
 }
 .btnBlack {
   border-radius: 0.2rem;
@@ -67,9 +79,16 @@ button:focus-visible {
   a:hover {
     color: #747bff;
   }
-  button {
-    
-  }
+  
+}
+.homepageDiv{
+  padding: 0 20%;
+}
+
+.homepageDiv .homepageSubDiv{
+ text-align: center;
+ color: black;
+ padding: 1rem 0;
 }
 
 .homepage {
@@ -77,9 +96,7 @@ button:focus-visible {
   padding: 1.5rem;
 }
 
-.homepage ul li {
-  text-decoration: none;
-}
+
 
 .logoImg {
   width: 10rem;
@@ -89,10 +106,12 @@ button:focus-visible {
   display: flex;
   justify-content: space-between;
 }
+
 .homepage ul li {
   display: flex;
   justify-content: space-between;
   gap: 2rem;
+  text-decoration: none;
 }
 
 .gridAlbums {
@@ -121,12 +140,17 @@ button:focus-visible {
 }
 
 .footerLinks {
+  color: grey;
   display: flex;
   list-style: none;
   justify-content: space-around;
 }
 .midText{
   margin-top: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   
 }
 .annouce{
@@ -139,6 +163,8 @@ button:focus-visible {
 }
 
 /* Model CSS */
+
+
 body.active-modal {
   overflow-y: hidden;
   color: black;
@@ -171,7 +197,7 @@ body.active-modal {
   transform: translate(-50%, -50%);
   line-height: 1.4;
   background: #f1f1f1;
-  padding: 14px 28px;
+  padding: 28px 56px;
   border-radius: 3px;
   max-width: 600px;
   min-width: 300px;
@@ -187,9 +213,18 @@ body.active-modal {
 .modalForm{
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .modalForm input{
-  padding: .5rem 15rem;
+  padding: .5rem 24rem .5rem .5rem;
+  margin: .2rem 0;
+}
+.modalForm button{
+  padding: .5rem 16.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 /* End Model CSS */
 
