@@ -33,7 +33,7 @@ const Homepage = () => {
                         <li>
                             <img className='logoImg' src="src/images/signup_logo.png" alt="logo" />
                         </li>
-                        <li> <li>
+                        <li>
                             <button onClick={toggleModal} className="btnBlack">
                                 Sign In
                             </button>
@@ -46,21 +46,22 @@ const Homepage = () => {
                                             <input type="text" placeholder="Your Email address" />
                                             <input type="password" placeholder="Your Password" />
                                             <Link to="/dashboard"><button className="btn">Sign In</button></Link>
+                                            <h4>Don't have an account? <a href="#">Sign Up</a></h4>
+                                            <p className='paraModal'>
+                                                When registering, you agree that we may use your provided data for the registration and to send you notifications on our products and services. You can unsubscribe from notifications at any time in your settings. For additional info please refer to our Privacy Policy.
+                                            </p>
                                         </div>
-                                        <h4>Don't have an account? <a href="#">Sign Up</a></h4>
-                                        <p>
-                                            When registering, you agree that we may use your provided data for the registration and to send you notifications on our products and services. You can unsubscribe from notifications at any time in your settings. For additional info please refer to our Privacy Policy.
-                                        </p>
+
                                         <button className="close-modal" onClick={toggleModal}>
                                             X
                                         </button>
                                     </div>
                                 </div>
                             )}
-                        </li>
-                        <li><button onClick={toggleModal} className='btn'>Create Account</button></li>
-                        <li><button onClick={toggleModal} className='btnBlack'>For Artist</button></li></li>
-                       
+
+                            <li><button onClick={toggleModal} className='btn'>Create Account</button></li>
+                            <li><button onClick={toggleModal} className='btnBlack'>For Artist</button></li></li>
+
                     </ul>
                 </nav>
                 <div className='midText'>
@@ -82,7 +83,7 @@ const Homepage = () => {
                 <AlbumGrid />
             </div>
 
-            <div  className='homepageSubDiv'>
+            <div className='homepageSubDiv'>
                 {/* className='annouce' */}
                 <h2>Thanks for listening. Now join in.</h2>
                 <h3>Save tracks, follow artists and build playlists. All for free.</h3>

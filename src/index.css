@@ -226,6 +226,14 @@ body.active-modal {
   justify-content: center;
   align-items: center;
 }
+.modalForm h4{
+  padding: .8rem 0 0 0;
+}
+.paraModal{
+  margin: .5rem .8rem 0 .8rem;
+  text-align: justify;
+  
+}
 /* End Model CSS */
 
 .parentNavBar {
@@ -248,4 +256,30 @@ body.active-modal {
 
 .searchBar{
   padding: .5rem 20rem .5rem .5rem;
+}
+
+/*====================homeDiv / dashboard=============================  */
+.homeDivs{
+  display: flex;
+  margin: 0 2%;
+ 
+}
+.feedDivs{
+  display: flex;
+  margin: 0 2%;
+}
+.sideFooter{
+  flex-direction: column;
+  display: flex;
+  padding: 1rem;
+  text-align: center;
+  
+}
+.sideFooter li{
+  padding: .2rem;
+  font-size: small;
+}
+.songDiv{
+  display: flex;
+  flex: 1;
 }
