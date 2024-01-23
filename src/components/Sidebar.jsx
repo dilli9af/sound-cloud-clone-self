@@ -2,9 +2,11 @@ import React from 'react'
 
 const Sidebar = () => {
     return (
-        <>
+        <> <div className='sideFooter'>
+            
             <h2>Listening History</h2>
             <p>Songs plyed to be added below as history</p>
+            <hr />
             <div>
                 <ul className='footerLinks'>
                     <li>About us</li>
@@ -22,9 +24,10 @@ const Sidebar = () => {
                     <li>Manager</li>
                     <li>Imprint</li>
                     <li>Charts</li>
-                    <li><h3>Language: English (US)</h3></li>
                 </ul>
-            </div>
+                <h5 style={{display:'flex',flexDirection:'flex-start'}}>Language: English (US)</h5>
+            </div></div>
+
         </>
     )
 }

@@ -5,11 +5,13 @@ import Sidebar from './Sidebar';
 const Feed = () => {
   return (
     <>
-    <NavBar />
-    <div>
-        <h3>Apeended songs list infinite scroll</h3>
-    </div>
-    <Sidebar />
+      <NavBar />
+      <div className='feedDivs'>
+        <div> <h3>Apeended songs list infinite scroll</h3></div>
+        <hr />
+        <div><Sidebar /></div>
+      </div>
+
     </>
   )
 }
