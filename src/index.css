@@ -317,3 +317,19 @@ flex-grow: 6;
 #main:hover{
   cursor: pointer;
 }
+
+.footerSongs {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f0f0f0;
+  padding: 10px;
+  text-align: center;
+}
+
+.footerSongs img{
+  height: 50px;
+  width: 50px;
+}
