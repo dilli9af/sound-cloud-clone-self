@@ -103,10 +103,8 @@ const Homepage = () => {
                     <li>Help</li>
                     <li>Legal</li>
                     <li>Privacy</li>
-                    <li>Cookie</li>
-                    <li>Policy</li>
-                    <li>Consent</li>
-                    <li>Manager</li>
+                    <li>Cookie Policy</li>
+                    <li>Consent Manager</li>
                     <li>Imprint</li>
                     <li>Charts</li>
                     <li><h3>Language: English (US)</h3></li>
