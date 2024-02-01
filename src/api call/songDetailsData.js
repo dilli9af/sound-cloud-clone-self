@@ -2185,6 +2185,7 @@
     ]
 }
 
+console.log(songData.data)
 
 const mainDiv = document.getElementById('main');
     
