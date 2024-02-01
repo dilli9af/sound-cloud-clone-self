@@ -135,6 +135,32 @@ button:focus-visible {
   object-fit: cover; 
 }
 
+/* song feed */
+
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc; /* Optional: Add border for cellAlbum */
+  color: black;
+  padding: .5rem .5rem .5rem .5rem;
+  width: fit-content;
+  height: auto;
+
+}
+.container div{
+  padding: .5rem;
+}
+
+.container img{
+ width: 200px; 
+  height: 200px; 
+}
+
+
+
 .song-details {
   margin-top: 10px;
 }
@@ -282,19 +308,24 @@ flex-grow: 6;
 }
 .feedDivs{
   display: flex;
-  margin: 1rem 2rem;
+  margin: 1rem 15rem 1rem 15rem;
+  
 }
-.feedItem:nth-child(2){
+
+.feedItem:nth-child(1){
   flex-grow: 1;
 }
-.feedItem:nth-child(1){
-  flex-grow: 5;
+
+.feedItem:nth-child(3){
+  flex-grow: 1;
 }
+
 .sideFooter{
   flex-direction: column;
   display: flex;
   padding: 1rem;
   text-align: center;
+  position: fixed;
   
 }
 .sideFooter li{
@@ -320,16 +351,19 @@ flex-grow: 6;
 
 .footerSongs {
   display: flex;
+  
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: #f0f0f0;
-  padding: 10px;
-  text-align: center;
+  background-color: #bc6100;
+  padding: 1rem;
+  
 }
 
 .footerSongs img{
   height: 50px;
   width: 50px;
+  padding-right: 1rem;
 }
+
