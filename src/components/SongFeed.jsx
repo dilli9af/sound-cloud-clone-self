@@ -62,8 +62,6 @@ const SongFeed = () => {
             <p onClick={() => handlePlayPause(index)}>{formatMood(song.mood)}</p>
             <FavoriteBorderSharpIcon />
           </div>
-
-
         </div>
       ))}
       <div >

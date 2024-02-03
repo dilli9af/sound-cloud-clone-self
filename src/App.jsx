@@ -7,6 +7,7 @@ import Feed from './components/Feed';
 import Library from './components/Library';
 import UserInfo from './components/UserInfo';
 import SongFeed from './components/SongFeed';
+import MainApp from './testingComponents/MainApp';
 
 
 
@@ -14,6 +15,7 @@ const App = () => {
   return (
     <Router>
       <Routes>
+        {/* <Route path="/" element={<MainApp />} /> */}
         {/* <Route path='/' element={<SongFeed />} /> */}
         <Route path="/" element={<Homepage />} />
         <Route path='/dashboard' element={<Dashboard />} />
