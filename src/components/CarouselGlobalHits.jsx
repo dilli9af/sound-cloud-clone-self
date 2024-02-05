@@ -113,46 +113,46 @@ const CarouselGlobalHits = () => {
     };
     const responsive = {
         superLargeDesktop: {
-          // the naming can be any, depends on you.
-          breakpoint: { max: 4000, min: 3000 },
-          items: 6
+            // the naming can be any, depends on you.
+            breakpoint: { max: 4000, min: 3000 },
+            items: 6
         },
         desktop: {
-          breakpoint: { max: 3000, min: 1024 },
-          items: 6
+            breakpoint: { max: 3000, min: 1024 },
+            items: 6
         },
         tablet: {
-          breakpoint: { max: 1024, min: 464 },
-          items: 2
+            breakpoint: { max: 1024, min: 464 },
+            items: 2
         },
         mobile: {
-          breakpoint: { max: 464, min: 0 },
-          items: 2
+            breakpoint: { max: 464, min: 0 },
+            items: 2
         }
-      };
-      
-  return (
+    };
 
-   <>
-   <Carousel  className="carouselAlbum" responsive={responsive} >
-    
-   
-            {data.albums[0].albums.map((album, index) => (
-                
-                <div key={index} className="carouselCellAlbums">
-                    <img className='imgAlbum' src={album.imageURL} alt={album.albumName} />
-                    <div className="song-details">
-                        <p className="song-title">{album.songs[0].title}</p>
-                        <p className="artist-name">{album.artistName}</p>
+    return (
+
+        <>
+            <Carousel className="carouselAlbum" responsive={responsive} >
+
+
+                {data.albums[0].albums.map((album, index) => (
+
+                    <div key={index} className="carouselCellAlbums">
+                        <img className='imgAlbum' src={album.imageURL} alt={album.albumName} />
+                        <div className="song-details">
+                            <p className="song-title">{album.songs[0].title}</p>
+                            <p className="artist-name">{album.artistName}</p>
+                        </div>
                     </div>
-                </div>
 
-            ))}
+                ))}
 
-       
-</Carousel>
-   </>
-  )
+
+            </Carousel>
+        </>
+    )
 }
 
 export default CarouselGlobalHits;
