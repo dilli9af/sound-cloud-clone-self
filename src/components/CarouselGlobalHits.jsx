@@ -135,8 +135,6 @@ const CarouselGlobalHits = () => {
 
         <>
             <Carousel className="carouselAlbum" responsive={responsive} >
-
-
                 {data.albums[0].albums.map((album, index) => (
 
                     <div key={index} className="carouselCellAlbums">
@@ -148,8 +146,6 @@ const CarouselGlobalHits = () => {
                     </div>
 
                 ))}
-
-
             </Carousel>
         </>
     )
