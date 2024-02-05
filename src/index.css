@@ -367,3 +367,12 @@ flex-grow: 6;
   padding-right: 1rem;
 }
 
+/* carousel */
+
+.carouselAlbum{
+  display: flex;
+  padding-top: 1rem;
+  margin: 0 20% 0 5%;
+  color: black;
+}
+
