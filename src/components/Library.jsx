@@ -7,7 +7,9 @@ const Library = () => {
   return (
     <>
     <NavBar />
+    
     <h2 style={{marginLeft:'5rem', color:'black'}}>Most Iconic Global Hits</h2>
+
     <CarouselGlobalHits />
     {/* <div>
         <ul>

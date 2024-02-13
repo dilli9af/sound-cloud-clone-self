@@ -12,7 +12,7 @@ const Feed = () => {
       
         {/* <div> <h3>Apeended songs list infinite scroll</h3></div> */}
         <div className='feedItem'><SongFeed /></div>
-        <hr />
+        {/* <hr /> */}
         <div className='feedItem'><Sidebar /></div>
         
         

@@ -17,7 +17,6 @@ const Homepage = () => {
 
     return (
         <div className='homepageDiv'>
-
             <div
                 className='homepage'
                 style={{
@@ -61,7 +60,6 @@ const Homepage = () => {
 
                             <li><button onClick={toggleModal} className='btn'>Create Account</button></li>
                             <li><button onClick={toggleModal} className='btnBlack'>For Artist</button></li></li>
-
                     </ul>
                 </nav>
                 <div className='midText'>
@@ -77,7 +75,6 @@ const Homepage = () => {
                 </div>
             </div>
 
-
             <div className='homepageSubDiv'>
                 <h2 style={{ color: 'black' }}>Hear what’s trending for free in the SoundCloud community</h2>
                 <AlbumGrid />
@@ -88,10 +85,13 @@ const Homepage = () => {
                 <h2>Thanks for listening. Now join in.</h2>
                 <h3>Save tracks, follow artists and build playlists. All for free.</h3>
             </div>
+
             <div className='homepageSubDiv'>
                 <button onClick={toggleModal} className='btnbig'>Create Account</button>
             </div>
+
             <hr />
+            
             <div className='homepageSubDiv'>
                 <ul className='footerLinks'>
                     <li>About us</li>

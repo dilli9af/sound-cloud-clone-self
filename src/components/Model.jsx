@@ -28,10 +28,9 @@ export default function Modal() {
                             <h1>Sign In</h1>
                             <input type="text" placeholder="Your Eamil address" />
                             <input type="password" placeholder="Your Passwors" />
-                            <button  className="btn">Sign In</button></div>
+                            <button className="btn">Sign In</button></div>
                         <h4>Don't have an account? <a href="#">Sign Up</a></h4>
-                        <p>
-                            When registering, you agree that we may use your provided data for the registration and to send you notifications on our products and services. You can unsubscribe from notifications at any time in your settings. For additional info please refer to our Privacy Policy.</p>
+                        <p>When registering, you agree that we may use your provided data for the registration and to send you notifications on our products and services. You can unsubscribe from notifications at any time in your settings. For additional info please refer to our Privacy Policy.</p>
                         <button className="close-modal" onClick={toggleModal}>
                             X
                         </button>
