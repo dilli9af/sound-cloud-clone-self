@@ -1,5 +1,5 @@
 
-        var songData={
+var songData = {
     "data": [
         {
             "_id": "64cf907d47ae38c3e33a189a",
@@ -2188,13 +2188,13 @@
 console.log(songData.data)
 
 const mainDiv = document.getElementById('main');
-    
+
 // Loop through each song in songData.data
 songData.data.forEach((song, index) => {
     // Create elements for each song
     const songDiv = document.createElement('div');
     songDiv.classList.add('song');
-    
+
     const img = document.createElement('img');
     img.src = song.thumbnail;
     img.alt = 'thumbnail';
@@ -2219,17 +2219,17 @@ songData.data.forEach((song, index) => {
     mainDiv.appendChild(songDiv);
 
     // Play song on clicking the song div
-    songDiv.addEventListener('click', function() {
+    songDiv.addEventListener('click', function () {
         const audio = songDiv.querySelector('audio');
         const allAudioElements = document.querySelectorAll('audio');
-    
+
         // Pause all audio elements
-        allAudioElements.forEach(function(audioElement) {
+        allAudioElements.forEach(function (audioElement) {
             if (audioElement !== audio && !audioElement.paused) {
                 audioElement.pause();
             }
         });
-    
+
         // Toggle play/pause for the clicked audio element
         if (audio.paused) {
             audio.play();
@@ -2237,5 +2237,5 @@ songData.data.forEach((song, index) => {
             audio.pause();
         }
     });
-    
+
 });
