@@ -13,10 +13,10 @@ const App = () => {
   return (
     <Router>
       <Routes>
-        
+
         <Route path="/" element={<Homepage />} />
         <Route path='/dashboard' element={<Dashboard />} />
-        <Route path="/feed"  element={<Feed />} />
+        <Route path="/feed" element={<Feed />} />
         <Route path="/library" element={<Library />} />
         <Route path="/userInfo" element={<UserInfo />} />
         {/* Add more Route elements for other pages if needed */}
