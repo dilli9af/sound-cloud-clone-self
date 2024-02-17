@@ -7,12 +7,12 @@ const Dashboard = () => {
   return (
     <>
       <div><NavBar /></div>
-     
+
       <div className='homeDivs'>
         <div className='songsDiv'>
           <AlbumGrid />
           content different music with filters</div>
-         <hr />
+        <hr />
         <div><Sidebar /></div>
       </div>
 
